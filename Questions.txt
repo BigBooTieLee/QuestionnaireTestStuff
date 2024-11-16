@@ -1,0 +1,13 @@
+3 //number of questions
+
+La meilleure option? //question itself
+Mode sombre;Mode clair;Mode haut contraste //options for the question
+0 //answer to the question
+
+Physique > Maths ?
+Vrai;Faux
+0
+
+Je suis biologiste. Tomate :
+Légume;Fruit
+1
