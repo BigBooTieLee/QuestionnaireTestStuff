@@ -49,7 +49,7 @@ class Questionnaire {
                 }
             } else {
                 System.out.println("Choix invalide. Ã‡a doit Ãªtre un nombre");
-                userInput.next(); // entrÃ©e Ã  la poubelle
+                userInput.next(); // entrée Ã  la poubelle
             }
 
         }
@@ -61,9 +61,9 @@ class Questionnaire {
 
         File[] txtFiles = new File(".").listFiles((file) -> file.getName().endsWith(".txt"));
         // cette ligne est inaccessible en ce moment:
-        // 1- classe anonyme (new File), 2- expression lambda (() -> ...) pour implÃ©menter une 
-        // interface (FileName), 3- utilisation des mÃ©thodes de la classe File que nous n'avons 
-        // pas Ã©tudiÃ©e
+        // 1- classe anonyme (new File), 2- expression lambda (() -> ...) pour implémenter une 
+        // interface (FileName), 3- utilisation des méthodes de la classe File que nous n'avons 
+        // pas étudiée
     
         System.out.println("Choisissez un quiz Ã  partir des options suivantes : ");
         for (int i = 0; i < txtFiles.length; i++) {
@@ -85,7 +85,7 @@ class Questionnaire {
                 }
             } else {
                 System.out.println("Choix invalide. Ã‡a doit Ãªtre un nombre");
-                userInput.next(); // entrÃ©e Ã  la poubelle
+                userInput.next(); // entrée Ã  la poubelle
             }
         }
 
@@ -117,15 +117,15 @@ class Questionnaire {
                 int answer = userInput.nextInt();
                 int correctAnswer = answerIndexes[i];
                 if (answer < 0 && answer >= thisQsOptions.length) {
-                    System.out.println("RÃ©ponse invalide (pas un choix)");
+                    System.out.println("Réponse invalide (pas un choix)");
                 } else if (answer == correctAnswer) {
-                    System.out.println("Bonne rÃ©ponse");
+                    System.out.println("Bonne réponse");
                 } else {
-                    System.out.println("Mauvaise rÃ©ponse");
+                    System.out.println("Mauvaise réponse");
                 }
             } else {
-                userInput.next(); // envoyer la rÃ©ponse Ã  la poubelle
-                System.out.println("RÃ©ponse invalide (doit Ãªtre un chiffre)");
+                userInput.next(); // envoyer la réponse Ã  la poubelle
+                System.out.println("Réponse invalide (doit Ãªtre un chiffre)");
             }
 
         }
@@ -145,17 +145,17 @@ class Questionnaire {
             options = new String[numQs][];
             answerIndexes = new int[numQs];
 
-            // obtenir les donnÃ©es
+            // obtenir les données
             for (int i = 0; i < numQs; i++) {
                 // ligne vide
                 fileReader.nextLine();
                 // question
                 line = fileReader.nextLine();
                 questions[i] = line;
-                // choix de rÃ©ponse
+                // choix de réponse
                 line = fileReader.nextLine();
                 options[i] = line.split(";");
-                // bonne rÃ©ponse
+                // bonne réponse
                 line = fileReader.nextLine();
                 answerIndexes[i] = Integer.parseInt(line);
             }
